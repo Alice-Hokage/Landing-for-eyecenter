@@ -1,0 +1,301 @@
+@import "colors"
+@import "fontello"
+*
+  font-family: 'Roboto', sans-serif
+  margin: 0
+  padding: 0
+  outline: none
+  box-sizing: border-box
+.hide
+  display: none
+.header
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  height: 100vh
+  padding: 40px 100px 50px 90px
+  background: $gray
+  .nav
+    display: flex
+    flex-direction: row
+    width: 100%
+    justify-content: space-between
+    align-items: center
+    &__logo
+      display: flex
+      font-weight: 100
+      font-size: 38px
+      color: $logo
+      cursor: default
+      span
+        font-weight: 300
+    &__menu
+      ul
+        display: flex
+        list-style-type: none
+        flex-direction: row
+        color: $text
+        font-size: 14px
+        text-transform: uppercase
+        cursor: pointer
+        li
+          margin-left: 20px
+          border-bottom: none
+          &:nth-child(1)
+            margin-left: 0
+          &:hover
+            font-weight: bold
+            transition: all 0.3s
+    &__info
+      display: flex
+      align-items: center
+      form
+        display: flex
+        align-items: center
+        position: relative
+        padding: 0
+        margin-right: 50px
+        input
+          border: 1px solid $text
+          border-radius: 20px
+          height: 30px
+          padding: 0 10px
+        label
+          position: absolute
+          right: 6px
+          transition: all 0.3s
+          &:hover
+            filter: drop-shadow(0 0 1px $text)
+            transiton: all 0.3s
+      &-basket
+        display: flex
+        align-items: center
+        border: none
+        padding: 5px
+        border-radius: 4px
+        background-color: transparent
+        transition: all 1s
+        span
+          font-size: 14px
+          color: $text
+          text-transform: uppercase
+          margin-left: 18px
+        &:hover
+          background: darken($gray, 10% )
+          transition: all 1s
+  .preview
+    display: flex
+    justify-content: center
+    position: relative
+    &__production
+      display: flex
+      flex-direction: column
+      align-items: center
+      &:first-child
+        margin-right: 20px
+      
+      &-title
+        font-size: 70px
+        color: $text
+        text-transform: uppercase
+        color: $white
+        line-height: 50px
+        h1
+          font-weight: 100
+        span
+          font-weight: 500
+      &-category
+        display: flex
+        color: $icon-color
+        font-size: 18px
+        margin: 40px 0 0 0 
+        padding: 0
+        position: relative
+        ul
+          list-style: none
+          display: flex
+          flex-direction: row
+          text-transform: uppercase
+          li
+            position: relative
+            &:first-child
+              padding-right: 10px
+              &::after
+                content: ''
+                height: 15px
+                width: 1px
+                position: absolute
+                right: 0px
+                top: 3px
+                background-color: $icon-color
+            &:last-child
+              padding-left: 10px
+.main
+  background: $white
+  padding: 0 100px 0 90px
+  position: relative
+  .offers
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    position: relative
+    top: -30px
+    &__leftColumn
+      display: flex
+      flex-direction: column
+      margin-right: 40px
+      &-topBlock
+        display: flex
+        justify-content: flex-end
+        height: 573px
+        width: 696px
+        padding: 50px
+        background-image: url('/image/img_spec.png')
+        background-repeat: no-repeat
+        filter: brightness(80%)
+        &_info
+          display: flex
+          flex-direction: column
+          justify-content: flex-end
+          align-items: center
+          p
+            font-size: 30px
+            font-weight: 500
+            text-align: center
+            padding-bottom: 30px
+            color: $logo
+            max-width: 270px
+            filter: $shadow
+          button
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 306px
+            height: 80px   
+            margin: 0
+            color: $white
+            background: transparent
+            border: 1px solid $white
+            filter: $shadowButton
+            transition: all .8s
+            p
+              font-size: 18px
+              text-transform: uppercase
+              margin: 0
+              padding: 0
+              color: $white
+            span
+              font-size: 18px
+              filter: $shadowButton
+              position: relative
+              left: 50px
+              margin: 0
+            &:hover
+              transition: all .8s
+              background: $gray
+              opacity: 0.5
+              p
+                color: $text
+                animation: move .8s linear
+              span
+                color: $text
+                animation: move .8s linear
+              @keyframes move
+                0%
+                  transform: translateX(0)
+                  opacity: 0.5
+                25%
+                  transform: translateX(100%)
+                  opacity: 0
+                50%
+                  transform: translateX(-100%)
+                  opacity: 0
+                75%
+                  transform: translateX(-100%)
+                  opacity: 0
+                100%
+                  transform: translateX(0)
+                  opacity: 1
+      &-bothBlock
+        padding: 35px 0 35px 0
+        margin-top: 37px
+        background: $gray
+        ul
+          display: flex
+          justify-content: space-around
+          list-style-type: none
+          position: relative
+          li
+            display: flex
+            flex-direction: column
+            align-items: center
+            &:first-child
+              &::after
+                content: ''
+                width: 2px
+                height: 100%
+                background: $lineGray
+                position: absolute
+                right: 50%
+                top: 0
+            h2
+              color: $lineGray
+              font-size: 24px
+              text-transform: uppercase
+              margin: 15px 0 10px 0
+            p
+              font-size: 18px
+              color: $lightGray
+    &__rightColumn
+      display: flex
+      flex-direction: column
+      justify-content: flex-end
+      width: 100%
+      background-image: url('/image/img_spec_2.png')
+      background-repeat: no-repeat
+      padding: 0 90px 50px 49px
+      &-info
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
+        align-items: center
+        p
+          font-size: 30px
+          font-weight: 500
+          text-align: center
+          padding-bottom: 30px
+          color: $white
+          max-width: 270px
+        button
+          display: flex
+          justify-content: center
+          align-items: center
+          width: 306px
+          height: 80px   
+          margin: 0
+          color: $white
+          background: transparent
+          border: 1px solid $white
+          transition: all .8s
+          p
+            font-size: 18px
+            text-transform: uppercase
+            margin: 0
+            padding: 0
+            color: $white
+          span
+            font-size: 18px
+            filter: $shadowButton
+            position: relative
+            left: 50px
+            margin: 0
+          &:hover
+            transition: all .8s
+            background: $gray
+            opacity: 0.5
+            p
+              color: $text
+              animation: move .8s linear
+            span
+              color: $text
+              animation: move .8s linear
